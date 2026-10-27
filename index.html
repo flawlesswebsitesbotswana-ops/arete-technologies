@@ -68,7 +68,7 @@ nav .btn{padding:0 16px;min-height:40px;color:#fff}
 .tl .card{border-top:2px solid var(--ac)}
 .pr{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:36px 0;border-top:1px solid var(--bd)}
 @media(max-width:800px){.pr{grid-template-columns:1fr}}
-.cta{text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(0,0,0,.05),transparent 60%),var(--bg2)}.cta p{margin-inline:auto}.cta .ctas{justify-content:center}
+.cta{text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(0,0,0,.05),transparent 60%),var(--bg)}.cta p{margin-inline:auto}.cta .ctas{justify-content:center}
 footer{border-top:1px solid var(--bd);padding:48px 0 32px;background:var(--bg)}
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}
 footer h4{font:500 .72rem var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin:0 0 12px}footer a{display:block;color:var(--tx);text-decoration:none;padding:5px 0;font-size:.92rem}footer a:hover{color:var(--ac)}
@@ -130,19 +130,16 @@ input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{b
 
 <section class="alt"><div class="w"><span class="mono">Core services</span><h2>Four clearly defined service areas.</h2><div class="g4" id="svc" style="margin-top:28px"></div></div></section>
 
-<section><div class="w"><span class="mono">Interactive showcase</span><h2>Technology Designed Around Your Business.</h2>
-<p>Illustrative interfaces with fictional sample data. They are not client results, and not a claim that Aréte sells a proprietary software product.</p>
-<div class="tabs" role="tablist" aria-label="Showcase previews" id="tb"></div><div id="tp" role="tabpanel" aria-live="polite"></div></div></section>
 
-<section class="alt"><div class="w"><span class="mono">Business value</span><h2>Technology should solve a business problem. Not create another one.</h2>
+<section><div class="w"><span class="mono">Business value</span><h2>Technology should solve a business problem. Not create another one.</h2>
 <div class="g3" id="val" style="margin-top:28px"></div><p style="margin-top:20px" class="sam">Outcomes depend on each client’s context. We do not promise guaranteed financial returns.</p></div></section>
 
-<section><div class="w"><span class="mono">Our process</span><h2>A structured approach to digital transformation.</h2><div class="tl" id="pro" style="margin-top:28px"></div>
+<section class="alt"><div class="w"><span class="mono">Our process</span><h2>A structured approach to digital transformation.</h2><div class="tl" id="pro" style="margin-top:28px"></div>
 <p style="margin-top:20px">Scope, timelines, deliverables and support arrangements are agreed with each client.</p></div></section>
 
-<section class="alt"><div class="w"><span class="mono">Why Aréte Technologies</span><h2>Built around your business. Engineered for what comes next.</h2><div class="g3" id="why" style="margin-top:28px"></div></div></section>
+<section><div class="w"><span class="mono">Why Aréte Technologies</span><h2>Built around your business. Engineered for what comes next.</h2><div class="g3" id="why" style="margin-top:28px"></div></div></section>
 
-<section><div class="w" style="text-align:center"><svg viewBox="0 0 600 140" style="max-width:600px;width:100%" role="img" aria-label="Decorative network of connected nodes"><g class="fw" stroke="#4788FF" fill="none" opacity=".6"><path d="M40 70 150 30 260 90 380 40 500 100 570 60"/><path d="M150 30 260 90"/><path d="M260 90 380 120 500 100"/></g><g fill="#fff" stroke="#4788FF"><circle cx="40" cy="70" r="6"/><circle cx="150" cy="30" r="6"/><circle cx="260" cy="90" r="8"/><circle cx="380" cy="40" r="6"/><circle cx="500" cy="100" r="6"/><circle cx="570" cy="60" r="6"/><circle cx="380" cy="120" r="5"/></g></svg>
+<section class="alt"><div class="w" style="text-align:center"><svg viewBox="0 0 600 140" style="max-width:600px;width:100%" role="img" aria-label="Decorative network of connected nodes"><g class="fw" stroke="#4788FF" fill="none" opacity=".6"><path d="M40 70 150 30 260 90 380 40 500 100 570 60"/><path d="M150 30 260 90"/><path d="M260 90 380 120 500 100"/></g><g fill="#fff" stroke="#4788FF"><circle cx="40" cy="70" r="6"/><circle cx="150" cy="30" r="6"/><circle cx="260" cy="90" r="8"/><circle cx="380" cy="40" r="6"/><circle cx="500" cy="100" r="6"/><circle cx="570" cy="60" r="6"/><circle cx="380" cy="120" r="5"/></g></svg>
 <h2 style="margin-top:20px">Build a more intelligent business.</h2><p style="margin-inline:auto">The right systems create the foundation for more connected operations, more useful information, and better-informed decisions.</p></div></section>
 <section class="cta"><div class="w"><h2>Let’s solve the right problem.</h2><p>Tell us how your business operates, where the challenges are, and what you want to improve. We’ll explore an appropriate technology solution with you.</p><div class="ctas"><a class="btn p" href="#contact" data-go="contact">Request a Consultation</a><a class="btn" href="#services" data-go="services">Explore Our Services</a></div></div></section>
 </div>
@@ -205,24 +202,6 @@ $("#pv-d").innerHTML=[["Information we collect","Details submitted via the enqui
 $("#fb").innerHTML+=CONFIG.budgets.map(b=>`<option>${b}</option>`).join("");
 $("#yr").textContent=new Date().getFullYear();
 
-/* Showcase */
-const sd={Q1:[42,55,48,60,66,72],Q2:[50,58,70,64,78,84],Q3:[60,66,62,80,88,95]};const mo=["M1","M2","M3","M4","M5","M6"];
-let q="Q2";
-function bi(){const d=sd[q],mx=100,pts=d.map((v,i)=>[40+i*(420/5),170-v*1.5]);const ln=pts.map(p=>p.join(",")).join(" ");
-return `<div class="dh"><b>Performance trends</b><div class="chips" role="group" aria-label="Filter sample period">${Object.keys(sd).map(k=>`<button aria-pressed="${k===q}" data-q="${k}">${k}</button>`).join("")}</div></div>
-<svg viewBox="0 0 500 200" role="img" aria-label="Line chart of sample performance index for ${q}, rising from ${d[0]} to ${d[5]}"><g stroke="rgba(0,0,0,.2)">${[0,1,2,3].map(i=>`<path d="M30 ${20+i*50}H490"/>`).join("")}</g><polyline points="${ln}" fill="none" stroke="#4788FF" stroke-width="2.5"/>${pts.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#fff" stroke="#4788FF"/><text x="${p[0]}" y="192" font-size="10" text-anchor="middle" fill="#5C5C5C" font-family="JetBrains Mono">${mo[i]}</text>`).join("")}</svg>
-<p class="sam" style="margin:6px 0 0">Sample index values ${q}: ${d.join(", ")}. Fictional data for illustration.</p>`}
-const views={
-ops:()=>`<div class="dh"><b>Operations Overview</b><span class="mono">Sample data</span></div><div class="kp"><div><b>128</b><span>Open orders</span></div><div><b>94%</b><span>On-time</span></div><div><b>17</b><span>Low stock</span></div><div><b>6</b><span>Pending approvals</span></div></div>
-<svg viewBox="0 0 500 120" role="img" aria-label="Bar chart of sample daily activity, Monday to Friday"><g fill="#4788FF">${[60,85,70,100,78].map((v,i)=>`<rect x="${40+i*90}" y="${110-v}" width="50" height="${v}" rx="4"/>`).join("")}</g><g fill="#5C5C5C" font-size="10" font-family="JetBrains Mono" text-anchor="middle">${["Mon","Tue","Wed","Thu","Fri"].map((d,i)=>`<text x="${65+i*90}" y="118">${d}</text>`).join("")}</g></svg>`,
-bi,
-net:()=>`<div class="dh"><b>Connected Data</b><span class="mono">Illustrative</span></div><svg viewBox="0 0 500 220" role="img" aria-label="Diagram: business applications and a spreadsheet feed a central database, which feeds reporting dashboards."><g font-family="JetBrains Mono" font-size="10" fill="#0A0A0A" text-anchor="middle"><g class="fw" stroke="#4788FF" fill="none"><path d="M110 40H210"/><path d="M110 110H210"/><path d="M110 180H210"/><path d="M290 110H390"/></g><g fill="#F5F5F5" stroke="rgba(0,0,0,.4)"><rect x="20" y="22" width="90" height="36" rx="8"/><rect x="20" y="92" width="90" height="36" rx="8"/><rect x="20" y="162" width="90" height="36" rx="8"/><rect x="390" y="92" width="90" height="36" rx="8"/></g><g stroke="#4788FF" fill="#fff"><rect x="210" y="80" width="80" height="60" rx="10"/></g><text x="65" y="44">Business app</text><text x="65" y="114">Spreadsheets</text><text x="65" y="184">Other systems</text><text x="250" y="114">Database</text><text x="435" y="114">Reports</text></g></svg>`};
-const names=[["ops","Operations Overview"],["bi","Business Intelligence"],["net","Connected Data"]];let cur="ops";
-function show(k){cur=k;$("#tb").innerHTML=names.map(([id,l])=>`<button role="tab" id="t-${id}" aria-selected="${id===k}" data-t="${id}" tabindex="${id===k?0:-1}">${l}</button>`).join("");$("#tp").innerHTML=`<div class="dash" aria-labelledby="t-${k}">${views[k]()}<p class="sam">SAMPLE DATA: fictional, for illustration only.</p></div>`}
-$("#tb").addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(b)show(b.dataset.t)});
-$("#tb").addEventListener("keydown",e=>{const i=names.findIndex(n=>n[0]===cur);if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=names[(i+(e.key==="ArrowRight"?1:2))%3][0];show(n);$("#t-"+n).focus()}});
-$("#tp").addEventListener("click",e=>{const b=e.target.closest("[data-q]");if(b){q=b.dataset.q;show(cur);$(`[data-q="${q}"]`)?.focus()}});
-show("ops");
 
 /* Routing */
 const meta={home:["Aréte Technologies | Software & Business Intelligence","Business systems, custom software, databases and BI dashboards."],services:["Services | Aréte Technologies","Business management systems, custom software, database design and business intelligence."],solutions:["Solutions | Aréte Technologies","Process digitisation, data centralisation, dashboards and workflow automation."],approach:["Our Approach | Aréte Technologies","Our delivery methodology, from discovery to ongoing support."],about:["About | Aréte Technologies","The technology division of Aréte Group."],contact:["Request a Consultation | Aréte Technologies","Tell us about your business challenge."],privacy:["Privacy Policy | Aréte Technologies","Privacy policy template."]};

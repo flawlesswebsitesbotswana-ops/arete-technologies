@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aréte Technologies | Software &amp; Business Intelligence</title>
+<meta name="description" content="Aréte Technologies designs business systems, custom software, databases and business intelligence dashboards. A division of Aréte Group, based in Botswana.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff;--bg2:#F5F5F5;--el:#FAFAFA;--tx:#0A0A0A;--mu:#5C5C5C;--ac:#0A0A0A;--ac2:#0A0A0A;--btn:#0A0A0A;--bd:rgba(0,0,0,.12);--nav:rgba(255,255,255,.85);--f:Geist,Inter,system-ui,-apple-system,sans-serif;--h:Geist,Inter,system-ui,-apple-system,sans-serif;--m:"Geist Mono",ui-monospace,monospace;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root[data-theme="light"]{--bg:#F7F8FB;--bg2:#EDF0F6;--el:#fff;--tx:#0B1018;--mu:#4A5565;--ac:#0A6FA8;--ac2:#2A5FD1;--bd:rgba(11,16,24,.16);--nav:rgba(247,248,251,.85)}}
+:root[data-theme="dark"]{color-scheme:dark}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--tx);font:400 16px/1.65 var(--f);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);backdrop-filter:blur(12px);z-index:60}
+a{color:inherit}h1,h2,h3{font-family:var(--h);font-weight:600;line-height:1.08;margin:0 0 .5em;letter-spacing:-.03em}
+h1{font-size:clamp(2.6rem,7vw,5rem)}h2{font-size:clamp(2rem,4.6vw,3.4rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em;color:var(--mu);max-width:62ch}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:clamp(72px,11vw,140px) 0;position:relative;border-top:1px solid var(--bd)}
+.alt{background:var(--bg2)}
+.mono,.tag{font:500 .72rem var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+.tag{display:inline-flex;align-items:center;margin-bottom:26px}
+.tag i{display:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:.25s;border-bottom:1px solid var(--bd)}
+header.s{background:var(--nav);backdrop-filter:blur(14px);border-color:var(--bd)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;gap:10px;align-items:center;text-decoration:none;font:600 .85rem var(--h);letter-spacing:.2em}
+.logo svg{width:26px;height:26px}.logo small{display:block;font-weight:500;letter-spacing:.3em;color:var(--mu);font-size:.6rem}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;color:var(--mu);padding:10px 12px;border-radius:8px;font-size:.92rem;display:inline-block;transition:.2s}
+nav a:hover,nav a[aria-current=page]{color:var(--tx)}nav a[aria-current=page]{box-shadow:inset 0 -2px var(--ac)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:8px;font:500 .95rem var(--f);text-decoration:none;cursor:pointer;border:1px solid rgba(0,0,0,.35);background:transparent;color:var(--tx);transition:.2s}
+.btn:hover{border-color:var(--tx);background:rgba(0,0,0,.04)}.btn.p{background:var(--btn);color:#fff;border-color:var(--btn);font-weight:600}.btn.p:hover{background:#333;border-color:#333;box-shadow:0 0 0 4px rgba(0,0,0,.1)}
+nav .btn{padding:0 16px;min-height:40px;color:#fff}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+#mb{display:none;background:none;border:1px solid var(--bd);color:var(--tx);width:46px;height:46px;border-radius:10px;font-size:1.3rem;cursor:pointer}
+@media(max-width:900px){#mb{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg2);flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--bd)}nav ul.o{display:flex}nav a{padding:14px 12px;width:100%}}
+.hero{display:grid;grid-template-columns:1fr;gap:64px;justify-items:center;text-align:center}.hero>div:first-child{max-width:880px}.hero h1{max-width:20ch;margin:0 auto .45em;font-size:clamp(2.5rem,6.6vw,5rem);letter-spacing:-.035em}.hero .sub{font-size:1.25rem;font-weight:500;color:var(--tx)}.hero p{margin-inline:auto;font-size:1.12rem}.hero .ctas{justify-content:center}.hero .dash{width:100%;max-width:940px;text-align:left;box-shadow:none}
+
+
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:64px 64px;opacity:.22;-webkit-mask-image:radial-gradient(ellipse at 50% 0,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0,#000,transparent 75%);pointer-events:none}.grid::before{content:"";position:absolute;left:0;right:0;top:34%;height:1px;background:linear-gradient(90deg,transparent,#0A0A0A,transparent)}.grid::after{content:"";position:absolute;left:50%;top:0;width:min(1000px,100%);height:420px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 0,rgba(0,0,0,.07),transparent 65%)}
+.card{background:transparent;border:1px solid var(--bd);border-radius:6px;padding:28px}.stages .card::after{display:none!important}
+.g2,.g3,.g4{display:grid;gap:16px}.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.card .n{font:500 .75rem var(--m);color:var(--mu);letter-spacing:.14em}
+.card ul{margin:0 0 1em;padding-left:18px;color:var(--mu)}.card li{margin:4px 0}
+.ic{width:42px;height:42px;stroke:var(--ac);fill:none;stroke-width:1.5;margin-bottom:14px}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.stages .card{border-radius:0;border-right-width:0}.stages .card:first-child{border-radius:8px 0 0 8px}.stages .card:last-child{border-radius:0 8px 8px 0;border-right-width:1px}
+.stages .card::after{content:"→";position:absolute;right:-11px;top:24px;z-index:2;background:var(--bg);color:var(--ac);width:22px;height:22px;border-radius:50%;text-align:center;font-size:.8rem;line-height:22px;border:1px solid var(--bd)}.stages .card:last-child::after{display:none}.stages .card{position:relative}
+@media(max-width:760px){.stages{grid-template-columns:1fr}.stages .card,.stages .card:first-child,.stages .card:last-child{border-radius:0;border-right-width:1px;border-bottom-width:0}.stages .card:first-child{border-radius:8px 8px 0 0}.stages .card:last-child{border-radius:0 0 8px 8px;border-bottom-width:1px}.stages .card::after{right:auto;left:24px;top:auto;bottom:-11px;transform:rotate(90deg)}}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;border:1px solid var(--bd);border-radius:8px;background:var(--bg2);margin-bottom:18px}
+.tabs button{background:none;border:0;color:var(--mu);padding:10px 16px;border-radius:8px;cursor:pointer;font:500 .88rem var(--f);min-height:44px}
+.tabs button[aria-selected=true]{background:var(--el);color:var(--tx);box-shadow:inset 0 0 0 1px var(--ac)}
+.dash{background:var(--el);border:1px solid var(--bd);border-radius:10px;padding:20px;position:relative;overflow:hidden}
+.dh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.kp div{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:12px}.kp b{display:block;font:600 1.4rem var(--h)}.kp span{font:.7rem var(--m);color:var(--mu);text-transform:uppercase;letter-spacing:.08em}
+.dash svg{width:100%;height:auto;display:block}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chips button{border:1px solid var(--bd);background:none;color:var(--mu);border-radius:6px;padding:8px 14px;cursor:pointer;font:.8rem var(--m);min-height:40px}.chips button[aria-pressed=true]{border-color:var(--ac);color:var(--ac)}
+.sam{font:.68rem var(--m);color:var(--mu);margin-top:12px}
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px;counter-reset:s}
+.tl .card{border-top:2px solid var(--ac)}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:36px 0;border-top:1px solid var(--bd)}
+@media(max-width:800px){.pr{grid-template-columns:1fr}}
+.cta{text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(0,0,0,.05),transparent 60%),var(--bg2)}.cta p{margin-inline:auto}.cta .ctas{justify-content:center}
+footer{border-top:1px solid var(--bd);padding:48px 0 32px;background:var(--bg)}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}
+footer h4{font:500 .72rem var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin:0 0 12px}footer a{display:block;color:var(--tx);text-decoration:none;padding:5px 0;font-size:.92rem}footer a:hover{color:var(--ac)}
+form{display:grid;gap:16px}label{font:500 .85rem var(--f);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--bd);border-radius:10px;color:var(--tx);padding:12px 14px;font:1rem var(--f);min-height:46px}
+input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{border-color:#B42318}
+.er{color:#B42318;font-size:.82rem;margin-top:4px;min-height:1em}.cb{display:flex;gap:10px;align-items:flex-start}.cb input{width:22px;min-height:22px;margin-top:3px}.hp{position:absolute;left:-9999px}
+#st{padding:14px;border-radius:10px;border:1px solid var(--bd);display:none}#st.show{display:block}#st.err{border-color:#B42318}#st.ok{border-color:var(--ac)}
+.fl{border:1px dashed var(--mu);color:var(--mu);border-radius:8px;padding:2px 8px;font:.7rem var(--m)}
+.pg{display:none}.pg.on{display:block;animation:in .45s ease both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.rv{opacity:0;transform:translateY(8px);transition:.6s ease}.rv.v{opacity:1;transform:none}
+.fw{stroke-dasharray:4 6;animation:fw 3.2s linear infinite}@keyframes fw{to{stroke-dashoffset:-20}}
+.pu{}@keyframes pu{50%{opacity:.35;transform:scale(1.4)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="btn p" style="position:absolute;left:-9999px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
+<header id="hd"><div class="w nb">
+<a href="#home" class="logo" data-go="home" aria-label="Aréte Technologies home"><svg viewBox="0 0 26 26" fill="none" stroke="var(--ac)" stroke-width="1.6"><path d="M13 2 24 22H2z"/><path d="M8 16h10" /></svg><span>ARÉTE<small>TECHNOLOGIES</small></span></a>
+<nav aria-label="Primary"><ul id="nl"></ul></nav>
+<button id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="nl">☰</button>
+</div></header>
+<main id="main" tabindex="-1">
+
+<div class="pg" id="p-home">
+<section style="padding-top:clamp(72px,12vw,150px);border-top:0"><div class="grid"></div><div class="w hero">
+<div><span class="tag"><i></i>Software &amp; Business Intelligence</span>
+<h1>Transform the Way Your Business Works.</h1>
+<p class="sub">Intelligent software. Connected data. Better business decisions.</p>
+
+<p>Aréte Technologies designs and implements business systems, custom software, and business intelligence solutions that help organisations streamline operations, gain visibility into their performance, and make more informed decisions.</p>
+<div class="ctas"><a class="btn p" href="#contact" data-go="contact">Discuss a Project</a><a class="btn" href="#solutions" data-go="solutions">Explore Our Solutions</a></div></div>
+<div class="dash" role="img" aria-label="Illustrative diagram: raw data sources flow through a database into a business intelligence dashboard. Sample visual only.">
+<svg viewBox="0 0 520 400"><defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4788FF" stop-opacity=".35"/><stop offset="1" stop-color="#4788FF" stop-opacity="0"/></linearGradient></defs>
+<g font-family="JetBrains Mono,monospace" font-size="9" fill="#5C5C5C"><text x="16" y="22" fill="#4788FF">OPERATIONS · SAMPLE DATA</text>
+<g stroke="rgba(0,0,0,.3)" fill="#F5F5F5"><rect x="14" y="40" width="70" height="30" rx="6"/><rect x="14" y="90" width="70" height="30" rx="6"/><rect x="14" y="140" width="70" height="30" rx="6"/></g>
+<text x="26" y="59">Sheets</text><text x="26" y="109">Orders</text><text x="26" y="159">Stock</text>
+<g class="fw" stroke="#4788FF" fill="none"><path d="M84 55C120 55 110 110 140 110"/><path d="M84 105h56"/><path d="M84 155C120 155 110 110 140 110"/><path d="M200 110h46"/></g>
+<g stroke="#4788FF" fill="#F5F5F5"><ellipse cx="170" cy="96" rx="30" ry="9"/><path d="M140 96v28c0 5 13 9 30 9s30-4 30-9V96"/></g><text x="150" y="150">DATABASE</text>
+<g stroke="rgba(0,0,0,.3)" fill="#F5F5F5"><rect x="246" y="36" width="260" height="190" rx="10"/></g>
+<g fill="#fff"><rect x="258" y="48" width="74" height="40" rx="6"/><rect x="340" y="48" width="74" height="40" rx="6"/><rect x="422" y="48" width="74" height="40" rx="6"/></g>
+<text x="266" y="64">REVENUE</text><text x="266" y="80" font-size="13" fill="#0A0A0A">▲ 12.4%</text><text x="348" y="64">ORDERS</text><text x="348" y="80" font-size="13" fill="#0A0A0A">1,284</text><text x="430" y="64">STOCK</text><text x="430" y="80" font-size="13" fill="#0A0A0A">93%</text>
+<path d="M258 200 290 180 320 190 352 150 384 160 418 118 458 130 494 100V212H258Z" fill="url(#gA)"/><path d="M258 200 290 180 320 190 352 150 384 160 418 118 458 130 494 100" fill="none" stroke="#4788FF" stroke-width="2"/><circle class="pu" cx="494" cy="100" r="4" fill="#4788FF"/>
+<g fill="#4788FF" opacity=".85"><rect x="258" y="252" width="22" height="60" rx="3"/><rect x="290" y="232" width="22" height="80" rx="3"/><rect x="322" y="262" width="22" height="50" rx="3"/><rect x="354" y="222" width="22" height="90" rx="3"/><rect x="386" y="242" width="22" height="70" rx="3"/></g>
+<text x="258" y="336">WEEKLY VOLUME</text>
+<g stroke="rgba(0,0,0,.3)" fill="#F5F5F5"><circle cx="450" cy="282" r="34"/></g><circle cx="450" cy="282" r="26" fill="none" stroke="#4788FF" stroke-width="7" stroke-dasharray="110 54" transform="rotate(-90 450 282)"/><text x="436" y="286" fill="#0A0A0A" font-size="11">67%</text>
+<text x="16" y="380">RAW DATA → STRUCTURED → INSIGHT</text></g></svg></div>
+</div></section>
+
+<section class="alt"><div class="w"><span class="mono">The business problem</span>
+<h2>Your business generates information. Does it generate insight?</h2>
+<p>Spreadsheets have their place, and technology should be introduced only where it creates practical value. These are the friction points we most often help organisations address.</p>
+<div class="g3" id="prob" style="margin-top:28px"></div></div></section>
+
+<section><div class="w"><span class="mono">The Aréte approach</span><h2>From operational complexity to business clarity.</h2>
+<div class="stages rv" id="stg" style="margin-top:28px"></div></div></section>
+
+<section class="alt"><div class="w"><span class="mono">Core services</span><h2>Four clearly defined service areas.</h2><div class="g4" id="svc" style="margin-top:28px"></div></div></section>
+
+<section><div class="w"><span class="mono">Interactive showcase</span><h2>Technology Designed Around Your Business.</h2>
+<p>Illustrative interfaces with fictional sample data. They are not client results, and not a claim that Aréte sells a proprietary software product.</p>
+<div class="tabs" role="tablist" aria-label="Showcase previews" id="tb"></div><div id="tp" role="tabpanel" aria-live="polite"></div></div></section>
+
+<section class="alt"><div class="w"><span class="mono">Business value</span><h2>Technology should solve a business problem. Not create another one.</h2>
+<div class="g3" id="val" style="margin-top:28px"></div><p style="margin-top:20px" class="sam">Outcomes depend on each client’s context. We do not promise guaranteed financial returns.</p></div></section>
+
+<section><div class="w"><span class="mono">Our process</span><h2>A structured approach to digital transformation.</h2><div class="tl" id="pro" style="margin-top:28px"></div>
+<p style="margin-top:20px">Scope, timelines, deliverables and support arrangements are agreed with each client.</p></div></section>
+
+<section class="alt"><div class="w"><span class="mono">Why Aréte Technologies</span><h2>Built around your business. Engineered for what comes next.</h2><div class="g3" id="why" style="margin-top:28px"></div></div></section>
+
+<section><div class="w" style="text-align:center"><svg viewBox="0 0 600 140" style="max-width:600px;width:100%" role="img" aria-label="Decorative network of connected nodes"><g class="fw" stroke="#4788FF" fill="none" opacity=".6"><path d="M40 70 150 30 260 90 380 40 500 100 570 60"/><path d="M150 30 260 90"/><path d="M260 90 380 120 500 100"/></g><g fill="#fff" stroke="#4788FF"><circle cx="40" cy="70" r="6"/><circle cx="150" cy="30" r="6"/><circle cx="260" cy="90" r="8"/><circle cx="380" cy="40" r="6"/><circle cx="500" cy="100" r="6"/><circle cx="570" cy="60" r="6"/><circle cx="380" cy="120" r="5"/></g></svg>
+<h2 style="margin-top:20px">Build a more intelligent business.</h2><p style="margin-inline:auto">The right systems create the foundation for more connected operations, more useful information, and better-informed decisions.</p></div></section>
+<section class="cta"><div class="w"><h2>Let’s solve the right problem.</h2><p>Tell us how your business operates, where the challenges are, and what you want to improve. We’ll explore an appropriate technology solution with you.</p><div class="ctas"><a class="btn p" href="#contact" data-go="contact">Request a Consultation</a><a class="btn" href="#services" data-go="services">Explore Our Services</a></div></div></section>
+</div>
+
+<div class="pg" id="p-services"><section><div class="w"><span class="mono">Services</span><h1>Services scoped to your business.</h1><p>Every engagement is scoped to your requirements, not sold as a universal package. Deliverables depend on the agreed scope.</p><div id="sv-d"></div></div></section></div>
+<div class="pg" id="p-solutions"><section><div class="w"><span class="mono">Solutions</span><h1>Organised around business needs.</h1><p>Examples of how we approach common needs in SMEs and growing organisations. These are scoped engagements, not standard off-the-shelf products.</p><div class="g2" id="so-d" style="margin-top:28px"></div></div></section></div>
+<div class="pg" id="p-approach"><section><div class="w"><span class="mono">Our approach</span><h1>Transparent, realistic, maintainable.</h1><p>The technology stack is chosen according to your requirements, budget, scale, existing systems and long-term needs.</p><div class="g3" id="ap-d" style="margin-top:28px"></div></div></section></div>
+<div class="pg" id="p-about"><section><div class="w"><span class="mono">About</span><h1>The technology division of Aréte Group.</h1><p>Aréte Technologies focuses initially on software and business intelligence.</p>
+<div class="g2" style="margin:28px 0"><div class="card"><h3>Mission</h3><p>To help businesses operate more intelligently through practical software, structured data, and technology designed around their needs.</p></div><div class="card"><h3>Vision</h3><p>To build useful technology solutions and grow into a trusted technology partner across markets.</p></div></div>
+<h2>Values</h2><div class="g3" id="va-d"></div>
+<div class="card" style="margin-top:28px"><span class="fl">TO BE SUPPLIED</span><p style="margin-top:10px">Team profiles and company milestones will appear here once verified information is available.</p></div></div></section></div>
+
+<div class="pg" id="p-contact"><section><div class="w g2" style="align-items:start"><div><span class="mono">Contact</span><h1>Request a consultation.</h1><p>Tell us about your business and the challenge you want to solve. Budget and phone number are optional.</p><p><span class="fl">TO BE SUPPLIED</span> Verified email, phone and address will appear here as a fallback contact method.</p></div>
+<form class="card" id="cf" novalidate aria-label="Consultation enquiry form">
+<div><label for="fn">Full name *</label><input id="fn" name="name" autocomplete="name" required><div class="er" id="e-fn"></div></div>
+<div><label for="fo">Business or organisation *</label><input id="fo" name="org" autocomplete="organization" required><div class="er" id="e-fo"></div></div>
+<div><label for="fe">Business email *</label><input id="fe" name="email" type="email" autocomplete="email" required><div class="er" id="e-fe"></div></div>
+<div><label for="fp">Phone (optional)</label><input id="fp" name="phone" type="tel" autocomplete="tel"></div>
+<div><label for="fs">Service of interest *</label><select id="fs" name="service" required><option value="">Select…</option><option>Business Management Systems</option><option>Custom Software Development</option><option>Database Design &amp; Management</option><option>Business Intelligence &amp; Dashboards</option><option>Multiple Services</option><option>Other / Not Sure Yet</option></select><div class="er" id="e-fs"></div></div>
+<div><label for="fm">Brief description of the challenge *</label><textarea id="fm" name="message" rows="5" required></textarea><div class="er" id="e-fm"></div></div>
+<div><label for="fb">Approximate budget (optional)</label><select id="fb" name="budget"><option value="">Prefer not to say</option></select></div>
+<div><label for="fc">Preferred contact method (optional)</label><select id="fc" name="contact"><option value="">No preference</option><option>Email</option><option>Phone</option></select></div>
+<div class="hp" aria-hidden="true"><label for="hp">Leave empty</label><input id="hp" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="cb"><input type="checkbox" id="fk" required><label for="fk" style="margin:0">I consent to Aréte Technologies using these details to respond to my enquiry, as described in the <a href="#privacy" data-go="privacy">Privacy Policy</a>. *</label></div><div class="er" id="e-fk"></div>
+<button class="btn p" type="submit" id="sb">Send enquiry</button>
+<div id="st" role="alert"></div></form></div></section></div>
+
+<div class="pg" id="p-privacy"><section><div class="w"><span class="mono">Privacy Policy</span><h1>Privacy Policy <span class="fl">TEMPLATE</span></h1><p>This is a template. Every section marked “Review” must be checked against Aréte’s actual practices and applicable law (including Botswana’s Data Protection Act) before publication.</p><div id="pv-d"></div></div></section></div>
+</main>
+
+<footer><div class="w"><div class="fg"><div><a href="#home" data-go="home" class="logo" style="display:flex;padding:0"><svg viewBox="0 0 26 26" fill="none" stroke="var(--ac)" stroke-width="1.6" style="width:26px"><path d="M13 2 24 22H2z"/></svg>ARÉTE TECHNOLOGIES</a><p style="margin-top:12px;font-size:.9rem">Business systems, custom software, databases and business intelligence, designed around how your organisation works.</p></div>
+<div><h4>Services</h4><div id="fs-l"></div></div><div><h4>Company</h4><a href="#about" data-go="about">About</a><a href="#approach" data-go="approach">Our Approach</a><a href="#contact" data-go="contact">Contact</a><a href="#privacy" data-go="privacy">Privacy Policy</a></div><div><h4>Contact</h4><p style="font-size:.85rem"><span class="fl">TO BE SUPPLIED</span><br>Contact details and official social links.</p></div></div>
+<p style="margin-top:28px;font-size:.8rem">© <span id="yr"></span> Aréte Technologies, a division of Aréte Group.</p></div></footer>
+
+<script>
+const CONFIG={endpoint:"",budgets:[]}; // Set endpoint to your server-side form handler; budgets to real ranges
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const pages=[["home","Home"],["services","Services"],["solutions","Solutions"],["approach","Our Approach"],["about","About"],["contact","Contact"]];
+const ico={a:'<path d="M4 6h16M4 12h10M4 18h16"/><circle cx="19" cy="12" r="2"/>',b:'<path d="M8 8 3 12l5 4M16 8l5 4-5 4M14 5l-4 14"/>',c:'<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',d:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'};
+const svcs=[
+["a","Business Management Systems","Tailored systems that bring records, workflows and business information into one structured environment: customer records, sales tracking, inventory workflows and reporting, depending on your requirements.",["Disconnected records and repeated data entry","Little visibility across departments"],["Requirements and workflow map","Configured or custom-built system","Handover and documentation"]],
+["b","Custom Software Development","Software built for your specific operational processes, with a focus on usability, maintainability, integration and solving genuine business problems.",["Off-the-shelf tools that don’t fit your process","Manual steps that should be automated"],["Solution design","Working software with agreed milestones","Testing, deployment, support options"]],
+["c","Database Design & Management","Structured databases that support accurate storage, reliable retrieval, data consistency and effective reporting, including integration, migration and maintenance where appropriate.",["Duplicated or inconsistent information","Legacy data that is hard to use"],["Data model","Migration plan and execution","Ongoing maintenance as agreed"]],
+["d","Business Intelligence & Data Analytics","Interactive dashboards, visual reports and KPIs, using appropriate tools such as Microsoft Power BI, so decision-makers can understand performance, spot trends and act on reliable information.",["Slow, manual management reporting","No single view of performance"],["KPI definition","Dashboards and reports","Training and refresh support"]]];
+const mk=(h,t)=>{const e=document.createElement(t||"div");e.innerHTML=h;return e};
+$("#nl").innerHTML=pages.map(([k,l])=>`<li><a href="#${k}" data-go="${k}">${l}</a></li>`).join("")+'<li><a class="btn p" href="#contact" data-go="contact">Discuss a Project</a></li>';
+$("#fs-l").innerHTML=svcs.map(s=>`<a href="#services" data-go="services">${s[1]}</a>`).join("");
+$("#prob").innerHTML=[["Manual, repetitive admin","Hours spent re-keying and chasing information that systems could handle."],["Disconnected spreadsheets and databases","Information lives in many places, with no shared source of truth."],["Inconsistent or duplicated data","Different versions of the same numbers undermine trust in reports."],["Limited visibility","Hard to see how the business is really performing, right now."],["Slow reporting and decisions","Reports take days to assemble, so decisions wait."],["Systems that can’t scale","What worked for ten people strains at fifty."]].map((p,i)=>`<div class="card rv"><div class="n">0${i+1}</div><h3>${p[0]}</h3><p style="margin:0">${p[1]}</p></div>`).join("");
+$("#stg").innerHTML=[["01","CONNECT","Bring relevant information together through structured databases, integrations and well-designed systems."],["02","AUTOMATE","Replace suitable repetitive workflows with reliable digital processes and business software."],["03","UNDERSTAND","Turn structured information into meaningful dashboards, reports and actionable insights."]].map(s=>`<div class="card"><div class="n">${s[0]}</div><h3>${s[1]}</h3><p style="margin:0">${s[2]}</p></div>`).join("");
+$("#svc").innerHTML=svcs.map(s=>`<div class="card rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${ico[s[0]]}</svg><h3>${s[1]}</h3><p>${s[2].split(".")[0]}.</p><a href="#services" data-go="services" style="color:var(--ac)">Explore Service →</a></div>`).join("");
+$("#val").innerHTML=["Less unnecessary manual work","More consistent business information","Better visibility into performance","More structured operational processes","Faster access to useful reports","Systems that evolve as requirements change"].map((v,i)=>`<div class="card rv"><div class="n">✓</div><h3 style="margin:8px 0 0">${v}</h3></div>`).join("");
+const proc=[["Discovery","Understand the business, its objectives, existing systems and pain points."],["Solution Design","Define requirements, workflows, data structures and an appropriate technical approach."],["Development","Build and configure the agreed solution, with feedback at appropriate milestones."],["Testing & Deployment","Validate functionality, address issues, and deploy with handover and documentation."],["Ongoing Support","Agreed maintenance, improvements, technical support and system management."]];
+$("#pro").innerHTML=proc.map((p,i)=>`<div class="card rv"><div class="n">0${i+1}</div><h3>${p[0]}</h3><p style="margin:0;font-size:.92rem">${p[1]}</p></div>`).join("");
+$("#why").innerHTML=[["Business-first thinking","We start with how you operate, not with a tool."],["Tailored solutions","Built for actual requirements, not generic packages."],["Structured, maintainable technology","Built so it can be understood, supported and extended."],["Clear communication","Plain language and visible progress throughout."],["Practical decision support","Data that helps people act, not just look."],["Long-term support","Continuous improvement after go-live."]].map(w=>`<div class="card rv"><h3>${w[0]}</h3><p style="margin:0">${w[1]}</p></div>`).join("");
+$("#sv-d").innerHTML=svcs.map(s=>`<div class="pr"><div><svg class="ic" viewBox="0 0 24 24">${ico[s[0]]}</svg><h2 style="font-size:1.8rem">${s[1]}</h2><p>${s[2]}</p><a class="btn" href="#contact" data-go="contact">Discuss this service</a></div><div class="card"><h3>Problems addressed</h3><ul>${s[3].map(x=>`<li>${x}</li>`).join("")}</ul><h3>Typical deliverables <small class="mono">(per agreed scope)</small></h3><ul>${s[4].map(x=>`<li>${x}</li>`).join("")}</ul></div></div>`).join("");
+$("#so-d").innerHTML=[["Business Process Digitisation","Paper and manual steps slow work and lose information.","Move key processes into a structured digital workflow.","Faster, more traceable operations."],["Operational Management Systems","Teams track operations in separate files.","One system for records, tasks and status.","Shared view of what is happening."],["Data Centralisation","Information is scattered across tools.","Consolidate into a well-designed database.","One consistent source of truth."],["Management Reporting","Reports are assembled by hand.","Automated, repeatable reports.","Faster access to useful reports."],["Performance Dashboards","Leaders lack a live view of KPIs.","Interactive dashboards, e.g. in Power BI.","Clearer, quicker decisions."],["Database Modernisation","Legacy data is fragile and hard to use.","Redesign and migrate with care.","Reliable, maintainable foundations."],["Workflow Automation","Repetitive approvals and hand-offs.","Automate suitable steps with business software.","Less manual work, fewer errors."],["Custom Internal Software","Generic tools don’t fit your process.","Purpose-built internal applications.","Software that fits how you work."]].map(s=>`<div class="card"><h3>${s[0]}</h3><p><b style="color:var(--tx)">Problem:</b> ${s[1]}</p><p><b style="color:var(--tx)">Possible solution:</b> ${s[2]}</p><p style="margin:0"><b style="color:var(--tx)">Value:</b> ${s[3]}</p></div>`).join("");
+$("#ap-d").innerHTML=[["Discovery & requirements","Structured conversations to understand goals and constraints."],["Workflow analysis","Map how work really happens before designing change."],["Solution architecture","Choose a stack to suit requirements, budget and scale."],["Data quality & structure","Clean, consistent data is the base for reliable reports."],["Usability","Systems people will actually want to use."],["Development & testing","Milestone feedback and validation before release."],["Security-conscious implementation","Sensible practices; no unverified compliance claims."],["Deployment & knowledge transfer","Handover and documentation, so you’re not dependent on us."],["Maintenance & improvement","Support and iteration as your needs change."]].map((a,i)=>`<div class="card"><div class="n">0${i+1}</div><h3>${a[0]}</h3><p style="margin:0">${a[1]}</p></div>`).join("");
+$("#va-d").innerHTML=["Excellence","Integrity","Innovation","Precision","Accountability","Continuous improvement"].map(v=>`<div class="card"><h3 style="margin:0">${v}</h3></div>`).join("");
+$("#pv-d").innerHTML=[["Information we collect","Details submitted via the enquiry form: name, organisation, email, optional phone, service interest, message, optional budget and contact preference."],["How we use it","To respond to enquiries and discuss potential projects."],["Third-party processing","Identify the email provider/CRM and hosting used once configured."],["Cookies and analytics","This site sets no non-essential cookies or trackers. Update if analytics are added."],["Retention and your rights","State retention periods and how to request access, correction or deletion."],["Contact for privacy matters","Add a verified contact once available."]].map(p=>`<div class="card" style="margin-bottom:12px"><h3>${p[0]} <span class="fl">REVIEW</span></h3><p style="margin:0">${p[1]}</p></div>`).join("");
+$("#fb").innerHTML+=CONFIG.budgets.map(b=>`<option>${b}</option>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+
+/* Showcase */
+const sd={Q1:[42,55,48,60,66,72],Q2:[50,58,70,64,78,84],Q3:[60,66,62,80,88,95]};const mo=["M1","M2","M3","M4","M5","M6"];
+let q="Q2";
+function bi(){const d=sd[q],mx=100,pts=d.map((v,i)=>[40+i*(420/5),170-v*1.5]);const ln=pts.map(p=>p.join(",")).join(" ");
+return `<div class="dh"><b>Performance trends</b><div class="chips" role="group" aria-label="Filter sample period">${Object.keys(sd).map(k=>`<button aria-pressed="${k===q}" data-q="${k}">${k}</button>`).join("")}</div></div>
+<svg viewBox="0 0 500 200" role="img" aria-label="Line chart of sample performance index for ${q}, rising from ${d[0]} to ${d[5]}"><g stroke="rgba(0,0,0,.2)">${[0,1,2,3].map(i=>`<path d="M30 ${20+i*50}H490"/>`).join("")}</g><polyline points="${ln}" fill="none" stroke="#4788FF" stroke-width="2.5"/>${pts.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#fff" stroke="#4788FF"/><text x="${p[0]}" y="192" font-size="10" text-anchor="middle" fill="#5C5C5C" font-family="JetBrains Mono">${mo[i]}</text>`).join("")}</svg>
+<p class="sam" style="margin:6px 0 0">Sample index values ${q}: ${d.join(", ")}. Fictional data for illustration.</p>`}
+const views={
+ops:()=>`<div class="dh"><b>Operations Overview</b><span class="mono">Sample data</span></div><div class="kp"><div><b>128</b><span>Open orders</span></div><div><b>94%</b><span>On-time</span></div><div><b>17</b><span>Low stock</span></div><div><b>6</b><span>Pending approvals</span></div></div>
+<svg viewBox="0 0 500 120" role="img" aria-label="Bar chart of sample daily activity, Monday to Friday"><g fill="#4788FF">${[60,85,70,100,78].map((v,i)=>`<rect x="${40+i*90}" y="${110-v}" width="50" height="${v}" rx="4"/>`).join("")}</g><g fill="#5C5C5C" font-size="10" font-family="JetBrains Mono" text-anchor="middle">${["Mon","Tue","Wed","Thu","Fri"].map((d,i)=>`<text x="${65+i*90}" y="118">${d}</text>`).join("")}</g></svg>`,
+bi,
+net:()=>`<div class="dh"><b>Connected Data</b><span class="mono">Illustrative</span></div><svg viewBox="0 0 500 220" role="img" aria-label="Diagram: business applications and a spreadsheet feed a central database, which feeds reporting dashboards."><g font-family="JetBrains Mono" font-size="10" fill="#0A0A0A" text-anchor="middle"><g class="fw" stroke="#4788FF" fill="none"><path d="M110 40H210"/><path d="M110 110H210"/><path d="M110 180H210"/><path d="M290 110H390"/></g><g fill="#F5F5F5" stroke="rgba(0,0,0,.4)"><rect x="20" y="22" width="90" height="36" rx="8"/><rect x="20" y="92" width="90" height="36" rx="8"/><rect x="20" y="162" width="90" height="36" rx="8"/><rect x="390" y="92" width="90" height="36" rx="8"/></g><g stroke="#4788FF" fill="#fff"><rect x="210" y="80" width="80" height="60" rx="10"/></g><text x="65" y="44">Business app</text><text x="65" y="114">Spreadsheets</text><text x="65" y="184">Other systems</text><text x="250" y="114">Database</text><text x="435" y="114">Reports</text></g></svg>`};
+const names=[["ops","Operations Overview"],["bi","Business Intelligence"],["net","Connected Data"]];let cur="ops";
+function show(k){cur=k;$("#tb").innerHTML=names.map(([id,l])=>`<button role="tab" id="t-${id}" aria-selected="${id===k}" data-t="${id}" tabindex="${id===k?0:-1}">${l}</button>`).join("");$("#tp").innerHTML=`<div class="dash" aria-labelledby="t-${k}">${views[k]()}<p class="sam">SAMPLE DATA: fictional, for illustration only.</p></div>`}
+$("#tb").addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(b)show(b.dataset.t)});
+$("#tb").addEventListener("keydown",e=>{const i=names.findIndex(n=>n[0]===cur);if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=names[(i+(e.key==="ArrowRight"?1:2))%3][0];show(n);$("#t-"+n).focus()}});
+$("#tp").addEventListener("click",e=>{const b=e.target.closest("[data-q]");if(b){q=b.dataset.q;show(cur);$(`[data-q="${q}"]`)?.focus()}});
+show("ops");
+
+/* Routing */
+const meta={home:["Aréte Technologies | Software & Business Intelligence","Business systems, custom software, databases and BI dashboards."],services:["Services | Aréte Technologies","Business management systems, custom software, database design and business intelligence."],solutions:["Solutions | Aréte Technologies","Process digitisation, data centralisation, dashboards and workflow automation."],approach:["Our Approach | Aréte Technologies","Our delivery methodology, from discovery to ongoing support."],about:["About | Aréte Technologies","The technology division of Aréte Group."],contact:["Request a Consultation | Aréte Technologies","Tell us about your business challenge."],privacy:["Privacy Policy | Aréte Technologies","Privacy policy template."]};
+function go(k,push){if(!meta[k])k="home";$$(".pg").forEach(p=>p.classList.toggle("on",p.id==="p-"+k));$$("#nl a[data-go]").forEach(a=>a.toggleAttribute("aria-current",a.dataset.go===k)||a.removeAttribute("aria-current"));$$("#nl a[data-go]").forEach(a=>{a.dataset.go===k&&!a.classList.contains("btn")?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});document.title=meta[k][0];$('meta[name=description]').content=meta[k][1];$("#nl").classList.remove("o");$("#mb").setAttribute("aria-expanded","false");if(push)try{history.replaceState(null,"","#"+k)}catch(e){location.hash=k}window.scrollTo({top:0,behavior:"instant"});$("#main").focus({preventScroll:true});obs()}
+document.addEventListener("click",e=>{const a=e.target.closest("[data-go]");if(a){e.preventDefault();go(a.dataset.go,true)}});
+addEventListener("hashchange",()=>go(location.hash.slice(1)));
+$("#mb").onclick=()=>{const o=$("#nl").classList.toggle("o");$("#mb").setAttribute("aria-expanded",o)};
+addEventListener("scroll",()=>$("#hd").classList.toggle("s",scrollY>20),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("v");io.unobserve(e.target)}}),{threshold:.12});
+function obs(){$$(".pg.on .rv").forEach(el=>io.observe(el))}
+go(location.hash.slice(1)||"home");
+
+/* Form */
+const F=$("#cf"),rules={fn:v=>v.trim()?"":"Enter your full name.",fo:v=>v.trim()?"":"Enter your organisation.",fe:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?"":"Enter a valid email address.",fs:v=>v?"":"Select a service.",fm:v=>v.trim().length>=10?"":"Describe your challenge (at least 10 characters)."};
+function chk(){let bad=null;for(const id in rules){const el=$("#"+id),m=rules[id](el.value);$("#e-"+id).textContent=m;el.setAttribute("aria-invalid",!!m);if(m){el.setAttribute("aria-describedby","e-"+id);bad=bad||el}}const k=$("#fk");$("#e-fk").textContent=k.checked?"":"Consent is required.";if(!k.checked)bad=bad||k;return bad}
+const stt=(c,t)=>{const s=$("#st");s.className="show "+c;s.textContent=t};
+F.addEventListener("submit",async e=>{e.preventDefault();$("#st").className="";if($("#hp").value)return;const bad=chk();if(bad){bad.focus();return}
+if(!CONFIG.endpoint){stt("err","Your enquiry has not been sent. The form is validated, but no server-side endpoint or email/CRM integration has been configured on this site yet. (Site owner: set CONFIG.endpoint.)");return}
+const b=$("#sb");b.disabled=true;b.textContent="Sending…";
+try{const r=await fetch(CONFIG.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(Object.fromEntries(new FormData(F)))});if(!r.ok)throw 0;stt("ok","Thank you. Your enquiry has been received.");F.reset()}catch(_){stt("err","Something went wrong and your enquiry was not sent. Please try again shortly.")}finally{b.disabled=false;b.textContent="Send enquiry"}});
+</script>
+</body>
+</html>

@@ -158,7 +158,6 @@ input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{b
 <div><label for="fp">Phone (optional)</label><input id="fp" name="phone" type="tel" autocomplete="tel"></div>
 <div><label for="fs">Service of interest *</label><select id="fs" name="service" required><option value="">Select…</option><option>Business Management Systems</option><option>Custom Software Development</option><option>Database Design &amp; Management</option><option>Business Intelligence &amp; Dashboards</option><option>Multiple Services</option><option>Other / Not Sure Yet</option></select><div class="er" id="e-fs"></div></div>
 <div><label for="fm">Brief description of the challenge *</label><textarea id="fm" name="message" rows="5" required></textarea><div class="er" id="e-fm"></div></div>
-<div><label for="fb">Approximate budget (optional)</label><select id="fb" name="budget"><option value="">Prefer not to say</option></select></div>
 <div><label for="fc">Preferred contact method (optional)</label><select id="fc" name="contact"><option value="">No preference</option><option>Email</option><option>Phone</option></select></div>
 <div class="hp" aria-hidden="true"><label for="hp">Leave empty</label><input id="hp" name="website" tabindex="-1" autocomplete="off"></div>
 <div class="cb"><input type="checkbox" id="fk" required><label for="fk" style="margin:0">I consent to Aréte Technologies using these details to respond to my enquiry, as described in the <a href="#privacy" data-go="privacy">Privacy Policy</a>. *</label></div><div class="er" id="e-fk"></div>
@@ -173,7 +172,7 @@ input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{b
 <p style="margin-top:28px;font-size:.8rem">© <span id="yr"></span> Aréte Technologies, a division of Aréte Group.</p></div></footer>
 
 <script>
-const CONFIG={endpoint:"",budgets:[]}; // Set endpoint to your server-side form handler; budgets to real ranges
+const CONFIG={endpoint:""}; // Set endpoint to your server-side form handler; budgets to real ranges
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const pages=[["home","Home"],["services","Services"],["solutions","Solutions"],["approach","Our Approach"],["about","About"],["contact","Contact"]];
 const ico={a:'<path d="M4 6h16M4 12h10M4 18h16"/><circle cx="19" cy="12" r="2"/>',b:'<path d="M8 8 3 12l5 4M16 8l5 4-5 4M14 5l-4 14"/>',c:'<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',d:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'};
@@ -196,7 +195,6 @@ $("#so-d").innerHTML=[["Business Process Digitisation","Paper and manual steps s
 $("#ap-d").innerHTML=[["Discovery & requirements","Structured conversations to understand goals and constraints."],["Workflow analysis","Map how work really happens before designing change."],["Solution architecture","Choose a stack to suit requirements, budget and scale."],["Data quality & structure","Clean, consistent data is the base for reliable reports."],["Usability","Systems people will actually want to use."],["Development & testing","Milestone feedback and validation before release."],["Security-conscious implementation","Sensible practices; no unverified compliance claims."],["Deployment & knowledge transfer","Handover and documentation, so you’re not dependent on us."],["Maintenance & improvement","Support and iteration as your needs change."]].map((a,i)=>`<div class="card"><div class="n">0${i+1}</div><h3>${a[0]}</h3><p style="margin:0">${a[1]}</p></div>`).join("");
 $("#va-d").innerHTML=["Excellence","Integrity","Innovation","Precision","Accountability","Continuous improvement"].map(v=>`<div class="card"><h3 style="margin:0">${v}</h3></div>`).join("");
 $("#pv-d").innerHTML=[["Information we collect","Details submitted via the enquiry form: name, organisation, email, optional phone, service interest, message, optional budget and contact preference."],["How we use it","To respond to enquiries and discuss potential projects."],["Third-party processing","Identify the email provider/CRM and hosting used once configured."],["Cookies and analytics","This site sets no non-essential cookies or trackers. Update if analytics are added."],["Retention and your rights","State retention periods and how to request access, correction or deletion."],["Contact for privacy matters","Add a verified contact once available."]].map(p=>`<div class="card" style="margin-bottom:12px"><h3>${p[0]} <span class="fl">REVIEW</span></h3><p style="margin:0">${p[1]}</p></div>`).join("");
-$("#fb").innerHTML+=CONFIG.budgets.map(b=>`<option>${b}</option>`).join("");
 $("#yr").textContent=new Date().getFullYear();
 
 
